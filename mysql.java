@@ -2,6 +2,11 @@ import java.sql.*;
 import java.util.Scanner;
 
 class MyClass {
+    
+       static final String DB_URL = "jdbc:mysql://localhost:3306/mysql";
+       static final String USER = "root";
+       static final String PASSWORD = null;
+    
     public static void main(String args[]) {
 
         Statement statement;
@@ -10,9 +15,7 @@ class MyClass {
         try {
 
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/mysql", "root", null
-            );
+            conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
 
             String ct = "CREATE TABLE IF NOT EXISTS users (username VARCHAR(30), password VARCHAR(30), name VARCHAR(30));";
 
