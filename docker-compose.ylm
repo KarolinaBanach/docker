@@ -9,7 +9,7 @@ services:
    - MYSQL_ROOT_PASSWORD=root
    - MYSQL_DATABASE=mysql
    - MYSQL_USER=KBanach
-   - MYSQL_PASSWORD=pasword
+   - MYSQL_PASSWORD=password
   networks:
    Bridge-Zadanie-1:
     ipv4_address: 10.0.10.3
